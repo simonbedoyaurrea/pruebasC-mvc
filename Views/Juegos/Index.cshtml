@@ -1,0 +1,16 @@
+﻿@model List<streamingParadigmas.Clases.Juego>
+
+<h2>Lista de Juegos</h2>
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+    @foreach (var juego in Model)
+    {
+        <div style="width: 200px; text-align: center; border: 1px solid #ccc; padding: 10px; border-radius: 8px;">
+            <img src="~/images/@juego.Imagen" alt="@juego.Nombre" style="width: 100%; border-radius: 8px;" />
+            <h4>@juego.Nombre</h4>
+            <p><strong>Género:</strong> @juego.Genero</p>
+            <p><strong>Calificación:</strong> @juego.Calificacion</p>
+        </div>
+    }
+</div>
+
